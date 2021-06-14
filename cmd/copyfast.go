@@ -21,6 +21,6 @@ func main() {
 	fmt.Println(lib.Division(3, 2))
 
 	chien := zoo.MakeChien("Woaf !")
-	fmt.Println(chien)
+	fmt.Println(chien, chien.Pattes)
 	chien.Say()
 }

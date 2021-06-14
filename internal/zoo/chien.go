@@ -3,7 +3,7 @@ package zoo
 import "fmt"
 
 type Chien struct {
-	pattes int
+	Pattes int
 	word   string
 }
 
@@ -14,7 +14,7 @@ func (c *Chien) Say() {
 func MakeChien(word string) *Chien {
 
 	return &Chien{
-		pattes: 4,
+		Pattes: 4,
 		word:   word,
 	}
 }
