@@ -2,7 +2,7 @@ package lib
 
 import "strconv"
 
-func convertIntToString(i int) string {
+func ConvertIntToString(i int) string {
 
 	return strconv.Itoa(i)
 }

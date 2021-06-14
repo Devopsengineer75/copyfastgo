@@ -14,7 +14,7 @@ func main() {
 	name4 := "Florent"
 	age := 30
 
-	fmt.Println("Hello " + name4 + " j'ai " + lib.convertIntToString(age) + " ans")
+	fmt.Println("Hello " + name4 + " j'ai " + lib.ConvertIntToString(age) + " ans")
 
 	fmt.Println(lib.Division(3, 0))
 }
