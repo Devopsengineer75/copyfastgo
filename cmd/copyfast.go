@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Devopsengineer75/copyfastgo/internal/lib"
+	"github.com/Devopsengineer75/copyfastgo/internal/zoo"
 )
 
 func main() {
@@ -17,4 +18,9 @@ func main() {
 	fmt.Println("Hello " + name4 + " j'ai " + lib.ConvertIntToString(age) + " ans")
 
 	fmt.Println(lib.Division(3, 0))
+	fmt.Println(lib.Division(3, 2))
+
+	chien := zoo.MakeChien("Woaf !")
+	fmt.Println(chien)
+	chien.Say()
 }
