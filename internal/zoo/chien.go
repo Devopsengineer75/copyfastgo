@@ -11,7 +11,7 @@ func (c *Chien) Say() {
 	fmt.Println(c.word)
 }
 
-func MakeChien(word string) Chien {
+func MakeChien(word string) *Chien {
 
 	return &Chien{
 		pattes: 4,
