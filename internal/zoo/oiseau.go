@@ -15,8 +15,8 @@ func (c *Oiseau) Say() {
 func MakeOiseau(Name string, word string) *Oiseau {
 
 	return &Oiseau{
-		Name:   Name,
 		Pattes: 2,
+		Name:   Name,
 		word:   word,
 	}
 }
