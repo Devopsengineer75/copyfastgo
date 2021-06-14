@@ -1,17 +1,20 @@
 package main
 
-/*import {
+import (
 	"fmt"
-	"strconv"
-}*/
+
+	"github.com/Devopsengineer75/copyfastgo/internal/lib"
+)
 
 func main() {
 
 	//var name string //nil
 	//var name2 string = "Florent"
 	//var name3 = "Florent"
-	//name4 := "Florent"
-	//age := 30
+	name4 := "Florent"
+	age := 30
 
-	//fmt.Println("Hello " + name4 + " j'ai " + strconv.Itoa(age) + " ans")
+	fmt.Println("Hello " + name4 + " j'ai " + lib.convertIntToString(age) + " ans")
+
+	fmt.Println(lib.Division(3, 0))
 }
