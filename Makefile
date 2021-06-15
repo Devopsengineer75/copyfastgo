@@ -1,6 +1,9 @@
 .DEFAUT_GOAL = help
 .SILENT:
 
+ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+$(eval $(ARGS):;@:)
+
 build-linux: ##build de la version linux
 	env GOOS=linux GOARCH=amd64 go build -o ./build/linux/copyfast cmd/copyfast.go 
 

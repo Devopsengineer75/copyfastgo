@@ -8,10 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 14 15:06:09 2021
+# Make data base, printed on Tue Jun 15 07:37:49 2021
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -21,7 +23,7 @@ USERPROFILE = C:\Users\aur95
 # environment
 LOCALAPPDATA = C:\Users\aur95\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-c09e8e29-6003-4b43-8e23-2b4e7a998d04-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-2c87e5b8-c50b-4cb9-ad56-71fdc8297381-sock
 # environment
 VSCODE_CWD = C:\Users\aur95\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -39,7 +41,9 @@ GOPATH = C:\Users\aur95\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_928_UWUKRFOAASGAOUPC
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_21628_LGHDMKNUVXWOWFVH
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -91,7 +95,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 928
+VSCODE_PID = 21628
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -181,6 +185,8 @@ HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
+GOMODCACHE = C:\Users\aur95\go\pkg\mod
+# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
@@ -190,6 +196,8 @@ ELECTRON_RUN_AS_NODE = 1
 TEMP = C:\Users\aur95\AppData\Local\Temp
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\9a1a59e56202a03efdef4219b74da5f8-1.57.0-main-sock
+# environment
+GOPROXY = https://proxy.golang.org,direct
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -207,7 +215,7 @@ PROCESSOR_REVISION = 2d07
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
 # variable set hash-table stats:
-# Load=97/1024=9%, Rehash=0, Collisions=9/124=7%
+# Load=101/1024=10%, Rehash=0, Collisions=10/128=8%
 
 # Pattern-specific Variable Values
 
@@ -215,9 +223,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/aur95/copyfast/copyfastgo, mtime 1623675968): 11 files, no impossibilities.
+# . (key c:/Users/aur95/copyfast/copyfastgo, mtime 1623676033): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -225,7 +233,8 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
 
 # Files
 
-build-windows:
+build 
+-windows:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -315,12 +324,12 @@ build-darwin:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 23 / storage = 176 B / avg = 7 B
-# current buf: size = 8174 B / used = 176 B / count = 23 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 24 / storage = 183 B / avg = 7 B
+# current buf: size = 8174 B / used = 183 B / count = 24 / avg = 7 B
 
-# strcache performance: lookups = 40 / hit rate = 42%
+# strcache performance: lookups = 41 / hit rate = 41%
 # hash-table stats:
-# Load=23/8192=0%, Rehash=0, Collisions=0/40=0%
-# Finished Make data base on Mon Jun 14 15:06:09 2021
+# Load=24/8192=0%, Rehash=0, Collisions=0/41=0%
+# Finished Make data base on Tue Jun 15 07:37:49 2021
 
  
