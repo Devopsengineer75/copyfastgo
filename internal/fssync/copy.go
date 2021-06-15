@@ -47,41 +47,42 @@ func copyFolder(origin string, target string, file fs.DirEntry) {
 }
 
 func copyFile(origin string, target string, file fs.DirEntry) {
-	fi, errfi := os.Open(origin + "/" + file.Name())
-	if errfi != nil {
-		log.Fatal(errfi)
-	}
+	if _, err := os.Stat(target + "/" + file.Name()); os.IsNotExist(err) {
+		fmt.Println("FILE:", origin+"/"+file.Name(), target+"/"+file.Name())
+		fi, errfi := os.Open(origin + "/" + file.Name())
+		if errfi != nil {
+			log.Fatal(errfi)
+		}
 
-	//function end up to execute cloture the file automatically
-	//whatever it happened it defer the cloture at the end
-	defer fi.Close()
+		//function end up to execute cloture the file automatically
+		//whatever it happened it defer the cloture at the end
+		defer fi.Close()
 
-	fo, errfo := os.Create(target + "/" + file.Name())
-	if errfo != nil {
-		log.Fatal(errfo)
-	}
+		fo, errfo := os.Create(target + "/" + file.Name())
+		if errfo != nil {
+			log.Fatal(errfo)
+		}
 
-	defer fo.Close()
+		defer fo.Close()
 
-	if errfi != nil && errfo != nil {
-		//only inferior to 1MO
-		buffer := make([]byte, 1024)
-		for {
-			n, err := fi.Read(buffer)
-			if err != nil && err != io.EOF {
-				log.Fatal(err)
-			}
+		if errfi != nil && errfo != nil {
+			//only inferior to 1MO
+			buffer := make([]byte, 1024)
+			for {
+				n, err := fi.Read(buffer)
+				if err != nil && err != io.EOF {
+					log.Fatal(err)
+				}
 
-			if n == 0 {
-				break
-			}
+				if n == 0 {
+					break
+				}
 
-			if _, err := fo.Write(buffer[:n]); err != nil {
-				log.Fatal(err)
+				if _, err := fo.Write(buffer[:n]); err != nil {
+					log.Fatal(err)
+				}
 			}
 		}
 	}
 
-	fi.Close()
-	fo.Close()
 }

@@ -1,22 +1,19 @@
 package main
 
 import (
-	"fmt"
-	"fssync"
-
+	"github.com/Devopsengineer75/copyfastgo/tree/main/internal/fssync"
 	"github.com/spf13/cobra"
 )
 
 func main() {
 	var rootCmd = &cobra.Command{
-		Use:   "version",
+		Use:   "copyfastgo",
 		Short: "Sync folder to target",
 		Args:  cobra.ExactArgs(2),
 		Run: func(cmd *cobra.Command, args []string) {
 			origin := args[0]
 			target := args[1]
 			fssync.CopyRecursive(origin, target)
-			fmt.Println(origin, target)
 		},
 	}
 	rootCmd.Execute()
