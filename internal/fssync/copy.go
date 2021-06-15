@@ -14,10 +14,11 @@ func CopyRecursive(origin string, target string) {
 	if _, err := os.Stat(origin); os.IsNotExist(err) {
 		os.Exit(1)
 	}
+
 	if _, err := os.Stat(target); os.IsNotExist(err) {
 		os.MkdirAll(target, 0777)
 	}
-	//ioutil
+
 	copy(origin, target)
 }
 
@@ -27,15 +28,15 @@ func copy(origin string, target string) {
 	if err != nil {
 		log.Fatal(err)
 	} else {
-
 		for _, file := range files {
+
 			if file.IsDir() {
 				copyFolder(origin, target, file)
 			} else {
 				copyFile(origin, target, file)
 			}
-		}
 
+		}
 	}
 }
 
@@ -85,5 +86,4 @@ func copyFile(origin string, target string, file fs.DirEntry) {
 			}
 		}
 	}
-
 }
