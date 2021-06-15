@@ -1,13 +1,13 @@
 package main
 
 import (
-	"github.com/Devopsengineer75/copyfastgo/tree/main/internal/fssync"
+	"github.com/Devopsengineer75/copyfastgo/internal/fssync"
 	"github.com/spf13/cobra"
 )
 
 func main() {
 	var rootCmd = &cobra.Command{
-		Use:   "copyfastgo",
+		Use:   "copyfast",
 		Short: "Sync folder to target",
 		Args:  cobra.ExactArgs(2),
 		Run: func(cmd *cobra.Command, args []string) {

@@ -40,7 +40,8 @@ func copy(origin string, target string) {
 }
 
 func copyFolder(origin string, target string, file fs.DirEntry) {
-	if _, err := os.Stat(target); os.IsNotExist(err) {
+	if _, err := os.Stat(target + "/" + file.Name()); os.IsNotExist(err) {
+		fmt.Println("FOLDER:", origin+"/"+file.Name(), target+"/"+file.Name())
 		os.MkdirAll(target+"/"+file.Name(), 0777)
 	}
 	copy(origin+"/"+file.Name(), target+"/"+file.Name())
