@@ -3,7 +3,7 @@ package tuto
 import (
 	"fmt"
 
-	"github.com/Devopsengineer75/copyfastgo/internal/zoo"
+	"github.com/Devopsengineer75/copyfastgo/internal/tuto/zoo"
 )
 
 func If() bool {
