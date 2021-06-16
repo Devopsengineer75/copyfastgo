@@ -1,3 +1,5 @@
+package tuto
+
 import "fmt"
 
 func createFor() {
@@ -21,7 +23,7 @@ func createFor() {
 		}
 	}
 
-	names := &[]string{"Florent", "Toto", "Tata"}
+	//names := &[]string{"Florent", "Toto", "Tata"}
 	//foreach,_ because index no need
 	/*for _, name := range *names {
 		fmt.Println(name) //florent, toto, tata
@@ -29,5 +31,4 @@ func createFor() {
 
 	//for index, name := range
 
-	
 }
